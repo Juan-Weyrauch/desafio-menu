@@ -25,4 +25,4 @@ public class WaiterTests
         
         Assert.That(table.HasOrders(), Is.True);
     }
-}
+} 
