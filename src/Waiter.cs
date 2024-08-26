@@ -2,10 +2,21 @@ using System.Collections;
 
 namespace Ucu.Poo.Restaurant;
 
-/// <summary>
-/// Representa un mozo en el restaurante, encargado de atender mesas.
-/// </summary>
+
 public class Waiter
 {
+    private string Name { get; set; }
+
     private ArrayList assignedTables = new ArrayList();
+
+    public void AssignTable(Table mesa)
+    {
+        assignedTables.Add(mesa);
+    }
+
+    public void TakeOrder(Table mesa, Dish plato)
+    {
+        mesa.AddToOrder(plato);
+    }
+
 }
