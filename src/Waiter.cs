@@ -5,7 +5,7 @@ namespace Ucu.Poo.Restaurant;
 
 public class Waiter
 {
-    private string Name { get; set; }d
+    private string Name { get; set; }
 
     private ArrayList assignedTables = new ArrayList();
 
