@@ -5,10 +5,13 @@ namespace Ucu.Poo.Restaurant;
 
 public class Waiter
 {
-    private string Name { get; set; }
+    public string Name { get; set; }
 
     private ArrayList assignedTables = new ArrayList();
-
+    public Waiter(string name)
+    {
+        Name = name;
+    }
     public void AssignTable(Table mesa)
     {
         assignedTables.Add(mesa);

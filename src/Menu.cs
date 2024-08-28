@@ -11,18 +11,11 @@ using System.Collections;
 /// </summary>
 public class Menu
 {
-    private string nombre { get; set };
-    private int precio { get; set };
-    private bool esVegetariano;
+    private string nombre { get; set; }
+    private double precio { get; set; }
+    private bool esVegetariano { get; set; }
     private ArrayList dishes = new ArrayList();
-
-    public Menu(string unNombre, int unPrecio, bool unEsVegetariano)
-    {
-        this.nombre = unNombre;
-        this.precio = unPrecio;
-        this.esVegetariano = unEsVegetariano;
-    }
-
+    
     public void AddDish(Dish dish)
     {
         dishes.Add(dish);
@@ -31,16 +24,16 @@ public class Menu
 
     public void RemoveDish(Dish dish)
     {
-        dishes.Clear(dish);
+        dishes.Remove(dish);
     }
 
     public Dish GetDishByName(string nombre)
     {
-        foreach (var dish in dishes)
+        foreach ( Dish plato in dishes)
         {
-            if (dish.Nombre == nombre)
+            if (plato.Name == nombre)
             {
-                return dish;
+                return plato;
             }
         }
 
